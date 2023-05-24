@@ -107,7 +107,7 @@ function Navbar() {
            
                     <button
                       type="button"
-                      onClick={handleLogout}
+                    
                       className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                     >
                       <span className="sr-only">Close menu</span>
