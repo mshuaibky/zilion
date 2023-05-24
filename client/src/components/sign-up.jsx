@@ -73,7 +73,7 @@ function SignUp() {
                 <div className="">
                     <div className="xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md">
                         <h2 className="text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl">
-                            Sign Up
+                            Sign In
                         </h2>
                         <p className="mt-2 text-base text-gray-600 dark:text-gray-300">
                             Already have an account?{' '}

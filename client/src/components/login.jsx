@@ -83,7 +83,7 @@ function Login() {
                             Sign Up
                         </h2>
                         <p className="mt-2 text-base text-gray-600 dark:text-gray-300">
-                            Already have an account?{' '}
+                          Dont have an account?{' '}
                             <Link to={'/sign-up'}> <a
                                 
                                 title=""
