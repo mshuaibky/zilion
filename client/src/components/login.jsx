@@ -100,7 +100,7 @@ function Login() {
                                 <div>
                                     <label
                                         htmlFor="email"
-                                        className="text-base font-medium text-gray-900 dark:text-gray-200"
+                                        className="text-base font-medium text-gray-900 dark:text-gray-900"
                                     >
                                         {' '}
                                         Email address{' '}
@@ -122,7 +122,7 @@ function Login() {
                                 <div>
                                     <label
                                         htmlFor="password"
-                                        className="text-base font-medium text-gray-900 dark:text-gray-200"
+                                        className="text-base font-medium text-gray-900 dark:text-gray-900"
                                     >
                                         {' '}
                                         Password{' '}

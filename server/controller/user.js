@@ -249,6 +249,7 @@ exports.productDetails=async(req,res)=>{
 
 //getting all products
 exports.AllProducts=async(req,res)=>{
+    log
     try {
      const products=await Product.find({approve:true})
      console.log(products,'database products');
