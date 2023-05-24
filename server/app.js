@@ -1,34 +1,34 @@
-const express=require('express')
-const app=express()
-require ('dotenv').config()
-const cors=require('cors')
-const morgan=require('morgan')
-const mongoose=require('mongoose')
-const cookieParser=require('cookie-parser')
+const express = require('express')
+const app = express()
+require('dotenv').config()
+const cors = require('cors')
+const morgan = require('morgan')
+const mongoose = require('mongoose')
+const cookieParser = require('cookie-parser')
 
 
 
 //Routes
-const userRoutes=require('./routes/user')
-const adminRoutes=require('./routes/admin')
-const superRoutes=require('./routes/super')
+const userRoutes = require('./routes/user')
+const adminRoutes = require('./routes/admin')
+const superRoutes = require('./routes/super')
 
 app.use(cors({
 
-    credentials:true,
-    methods:["GET","POST"],
-    origin:true,
-    origin:["http://127.0.0.1:5173"],
+    credentials: true,
+    methods: ["GET", "POST"],
+    origin: true,
+    origin: ["http://127.0.0.1:5173", "https://shuhaib.dynotxt.com"],
 }))
 // app.use(morgan('combined'))
 app.use(cookieParser())
 app.use(express.json({ limit: '50mb' }));
-app.use(express.urlencoded({ extended: true}));
+app.use(express.urlencoded({ extended: true }));
 
 //DB connection
-mongoose.connect(process.env.DATABASE).then(()=>{
+mongoose.connect(process.env.DATABASE).then(() => {
     console.log('DB CONNECTED');
-}).catch((error)=>{
+}).catch((error) => {
     console.log(error.message);
 })
 // //session
@@ -37,15 +37,15 @@ mongoose.connect(process.env.DATABASE).then(()=>{
 //     resave: false,
 //     saveUninitialized: true
 //   }));
-  
-app.use('/',userRoutes)
-app.use('/admin',adminRoutes)
-app.use('/super',superRoutes)
+
+app.use('/', userRoutes)
+app.use('/admin', adminRoutes)
+app.use('/super', superRoutes)
 
 //port
-const port =process.env.PORT;
+const port = process.env.PORT;
 
 //starting app
-app.listen(port,()=>{
+app.listen(port, () => {
     console.log(`app is running in port ${port} succesfully`);
 })
