@@ -1,10 +1,9 @@
-import axios from 'axios'
-axios.defaults.withCredentials = true
+import baseUrl from './baseUrl' 
 
 
 export async function getSuperAdmin(id){
 return new Promise((resolve,reject)=>{
-    axios.get(`http://localhost:7000/super/get-super-admin${id}`).then((data)=>{
+    baseUrl.get(`/super/get-super-admin${id}`).then((data)=>{
         if(data){
             resolve(data)
         }
@@ -18,7 +17,7 @@ return new Promise((resolve,reject)=>{
 //approvig products
 export async function approveProduct(id){
     return new Promise((resolve,reject)=>{
-        axios.get(`http://localhost:7000/super/approve-product${id}`).then((data)=>{
+        baseUrl.get(`/super/approve-product${id}`).then((data)=>{
             if(data){
                 resolve(data)
             }
@@ -30,7 +29,7 @@ export async function approveProduct(id){
 //logut
 export async function logout(id){
     return new Promise((resolve,reject)=>{
-        axios.get(`http://localhost:7000/super/super-admin-logout${id}`).then((data)=>{
+        baseUrl.get(`/super/super-admin-logout${id}`).then((data)=>{
             if(data){
                 resolve(data)
             }
